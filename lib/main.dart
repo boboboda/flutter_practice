@@ -12,20 +12,42 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-                backgroundColor: Colors.blueAccent,
-                title: SizedBox(
-                  child:  Text(
-                      '달러 기록',
-                  style: TextStyle(color: Colors.white),),
+                backgroundColor: Colors.white,
+                title: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text('금호동3가', style:TextStyle(
+                      fontSize: 18
+                    )),
+                    IconButton(onPressed: (){}, icon: Icon(Icons.arrow_downward), style: ButtonStyle()),
+                    Spacer(flex: 1),
+                    IconButton(onPressed: (){}, icon: Icon(Icons.search), style: ButtonStyle()),
+                    IconButton(onPressed: (){}, icon: Icon(Icons.menu), style: ButtonStyle()),
+                    IconButton(onPressed: (){}, icon: Icon(Icons.notifications_none), style: ButtonStyle()),
+                  ],
                 )),
-            body: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [Icon(Icons.star), Icon(Icons.star), Icon(Icons.star)],
+            body:
+            // Align(
+            //   alignment: Alignment.center,
+            //   child: Container(
+            //     width: double.infinity,
+            //     height: 50,
+            //     margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+            //     alignment: Alignment.center,
+            //     child: Text("dddddd"),
+            //     decoration: BoxDecoration(
+            //         color: Colors.blue,
+            //         border: Border.all(color: Colors.black)),
+            //   ),
+            // ),
+            SizedBox(
+              child: Text('안녕하세요',
+              style: TextStyle(),
+              ),
             ),
             bottomNavigationBar: BottomAppBar(
               child: SizedBox(
-                height:70,
+                height: 70,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
